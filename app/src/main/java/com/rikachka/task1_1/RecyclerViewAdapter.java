@@ -37,7 +37,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         public interface OnItemClickListener {
             void onItemClick(View view);
         }
-        private final OnItemClickListener listener;
+        private OnItemClickListener listener;
         RelativeLayout rowLayout;
         TextView rowText;
         ImageView rowImage;
@@ -50,6 +50,20 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             rowImage.setOnClickListener(this);
             rowText.setOnClickListener(this);
             itemView.setOnClickListener(this);
+            this.listener = listener;
+        }
+
+        DataViewHolder(View itemView) {
+            super(itemView);
+            rowLayout = (RelativeLayout) itemView.findViewById(R.id.row_layout);
+            rowText = (TextView) itemView.findViewById(R.id.row_text);
+            rowImage = (ImageView) itemView.findViewById(R.id.row_image);
+            rowImage.setOnClickListener(this);
+            rowText.setOnClickListener(this);
+            itemView.setOnClickListener(this);
+        }
+
+        public void setOnItemClickListener(OnItemClickListener listener) {
             this.listener = listener;
         }
 
@@ -72,14 +86,17 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public DataViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.list_row, parent, false);
-        return new DataViewHolder(view, new RecyclerViewAdapter.DataViewHolder.OnItemClickListener() {
+        final DataViewHolder dataViewHolder = new DataViewHolder(view);
+        dataViewHolder.setOnItemClickListener(new RecyclerViewAdapter.DataViewHolder.OnItemClickListener() {
             public void onItemClick(View view) {
                 Intent intent = new Intent(callingActivity.getApplicationContext(), SliderFragmentActivity.class);
                 intent.putExtra("JSON_OBJECT", jsonObject.toString());
+                intent.putExtra("CURRENT_ITEM", dataViewHolder.getAdapterPosition());
                 callingActivity.startActivity(intent);
                 callingActivity.finish();
             }
         });
+        return dataViewHolder;
     }
 
     @Override
