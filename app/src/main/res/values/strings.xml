@@ -1,10 +1,28 @@
 <resources>
-    <string name="app_name">Task1_1</string>
-
+    <string name="app_name">Task1</string>
     <!--empty string-->
     <string name="empty"></string>
-
-    <!--numbers-->
+    <!--hundreds-->
+    <string name="one_hundred">&#160;сто</string>
+    <string name="two_hundred">&#160;двести</string>
+    <string name="three_hundred">&#160;триста</string>
+    <string name="four_hundred">&#160;четыреста</string>
+    <string name="five_hundred">&#160;пятьсот</string>
+    <string name="six_hundred">&#160;шестьсот</string>
+    <string name="seven_hundred">&#160;семьсот</string>
+    <string name="eight_hundred">&#160;восемьсот</string>
+    <string name="nine_hundred">&#160;девятьсот</string>
+    <!--tens-->
+    <string name="one_ten">&#160;десять</string>
+    <string name="two_ten">&#160;двадцать</string>
+    <string name="three_ten">&#160;тридцать</string>
+    <string name="four_ten">&#160;сорок</string>
+    <string name="five_ten">&#160;пятьдесят</string>
+    <string name="six_ten">&#160;шестьдесят</string>
+    <string name="seven_ten">&#160;семьдесят</string>
+    <string name="eight_ten">&#160;восемьдесят</string>
+    <string name="nine_ten">&#160;девяносто</string>
+    <!--nums-->
     <string name="one_num">&#160;один</string>
     <string name="two_num">&#160;два</string>
     <string name="three_num">&#160;три</string>
@@ -24,30 +42,7 @@
     <string name="seventeen_num">&#160;семнадцать</string>
     <string name="eightteen_num">&#160;восемнадцать</string>
     <string name="nineteen_num">&#160;девятнадцать</string>
-
-    <!--tens-->
-    <string name="one_ten">&#160;десять</string>
-    <string name="two_ten">&#160;двадцать</string>
-    <string name="three_ten">&#160;тридцать</string>
-    <string name="four_ten">&#160;сорок</string>
-    <string name="five_ten">&#160;пятьдесят</string>
-    <string name="six_ten">&#160;шестьдесят</string>
-    <string name="seven_ten">&#160;семьдесят</string>
-    <string name="eight_ten">&#160;восемьдесят</string>
-    <string name="nine_ten">&#160;девяносто</string>
-
-    <!--hundreds-->
-    <string name="one_hundred">&#160;сто</string>
-    <string name="two_hundred">&#160;двести</string>
-    <string name="three_hundred">&#160;триста</string>
-    <string name="four_hundred">&#160;четыреста</string>
-    <string name="five_hundred">&#160;пятьсот</string>
-    <string name="six_hundred">&#160;шестьсот</string>
-    <string name="seven_hundred">&#160;семьсот</string>
-    <string name="eight_hundred">&#160;восемьсот</string>
-    <string name="nine_hundred">&#160;девятьсот</string>
-
-    <!--special-->
+    <!--specials-->
     <string name="million_special">&#160;миллион</string>
     <string name="one_hundred_special">&#160;тысяча</string>
     <string name="two_hundred_special">&#160;тысячи</string>

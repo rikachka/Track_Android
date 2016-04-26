@@ -7,13 +7,14 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.rikachka.task1_1.MainActivity">
+    tools:context="com.example.bulatgaliev.task1.MainActivity">
+
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:id="@+id/imageView"
-        android:src="@drawable/pinkhellokitty"
+        android:src="@mipmap/ic_launcher"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>
