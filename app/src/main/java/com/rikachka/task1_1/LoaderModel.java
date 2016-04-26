@@ -17,6 +17,7 @@ import java.net.URL;
 import java.nio.charset.Charset;
 
 public class LoaderModel {
+
     public JSONObject loadJson() {
         JSONObject json = new JSONObject();
         URL url;

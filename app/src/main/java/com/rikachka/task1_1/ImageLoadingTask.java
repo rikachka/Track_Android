@@ -17,13 +17,16 @@ import java.net.URL;
 
 public class ImageLoadingTask extends AsyncTask<String, Void, Bitmap> {
     ImageView imageView;
+
     ImageLoadingTask(ImageView imageView) {
         this.imageView = imageView;
     }
+
     @Override
     protected void onPostExecute(Bitmap bitmap) {
         imageView.setImageBitmap(bitmap);
     }
+
     @Override
     protected Bitmap doInBackground(String... params) {
         String urlString = params[0];

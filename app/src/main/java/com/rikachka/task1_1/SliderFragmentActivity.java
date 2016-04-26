@@ -55,7 +55,10 @@ public class SliderFragmentActivity extends FragmentActivity {
                 JSONObject jsonObjectElement = jsonObject.getJSONObject(jsonObject.names().getString(position));
                 String fragmentImageUrl = jsonObjectElement.getString("picture");
                 String fragmentTitle = jsonObjectElement.getString("title");
-                String fragmentInfo = jsonObjectElement.getString("info");
+                String fragmentInfo = "";
+                if (jsonObjectElement.has("info")) {
+                    fragmentInfo = jsonObjectElement.getString("info");
+                }
                 return PageFragment.init(fragmentImageUrl, fragmentTitle, fragmentInfo);
             } catch (JSONException e) {
                 Log.e("Exception", "RecyclerViewAdapter: " + e.toString());
